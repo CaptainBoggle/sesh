@@ -12,7 +12,7 @@ sesh = silent exploitation shell
 
 ## features
 
-- fully modular - enable/disable any feature at compiletime, runtime, or both
+- fully modular - enable/disable any feature at compile or runtime
 - ~~total disregard for~~ active leveraging of established conventions
 - does not touch disk without you knowing about it
 - read and write files without changing metadata
