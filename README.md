@@ -1,12 +1,12 @@
 # sesh
 
 `
-sesh = silent exploitation shell  
-| security engineering shell  
-| super epic shell  
-| stealth espionage shell  
-| standalone execution shell  
-| sexy encrypted shell  
+sesh = silent exploitation shell
+| security engineering shell
+| super epic shell
+| stealth espionage shell
+| standalone execution shell
+| sexy encrypted shell
 `
 # a linux shell for pentetration <sub><sup><sub><sub><sup><sub><sup><sub>testing</sub></sup></sub></sup></sub></sub></sup></sub>
 
