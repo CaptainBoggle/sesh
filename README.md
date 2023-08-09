@@ -21,6 +21,7 @@ sesh = silent exploitation shell
 - embed arbitrary files in the binary for later use
 - configuration can be saved as a short string, which can be loaded with ease
 - built in enumeration scripts
+- spoof running time (may need root)
 - something like a cooler version of [moonwalk](https://github.com/mufeedvh/moonwalk)
 - ignore SIGHUP (and/or other signals)
 - cool udp and tcp revshell capability, which when combined with the previous feature, means you can ssh (or whatever) to a target, run sesh, close ssh connection, and then reconnect via a more stealthy route (alla [pwncat](https://github.com/cytopia/pwncat))
