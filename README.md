@@ -33,6 +33,8 @@ sesh = silent exploitation shell
 
 - run executables from memory, from network, or even local binaries with or without +x set
     - not sure if I can do this, but optimally, given a binary in any of the above forms, you would be able to execute them with [userland exec](https://grugq.github.io/docs/ul_exec.txt) without overwriting the original sesh process, i.e imagine you are in a sesh session, and you run `silentexec /bin/ls`, this would read the `ls` binary, execute it with userland exec, show you the output, then return you to your sesh session, all without starting or stopping any processes at all!
+    - ok I thought a bit more about the above idea, and I think I can basically (before sesh performs a userland exec) patch the target binary (in memory) in such a way that rather than exiting post-execution, it instead would itself perform a userland exec to get back to sesh. This would mean losing whatever state sesh was previously in though, which might be a problem, but I could probably save the state and restore it using a method similar to that used by CryoPID.
+    - alternatively perhaps I should basically somehow spin up a userland virtual machine sort of thing. I'll have to investigate that avenue.
     - less cool version: through the use of memfd, like [this](https://magisterquis.github.io/2018/03/31/in-memory-only-elf-execution.html)
 
 - ability to start a process as a child of some arbitrary process (cursed+hard), or maybe something like [this](https://github.com/aseemjakhar/jugaad) to start the process *inside* another process without causing any issues with the original process
